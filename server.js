@@ -47,6 +47,6 @@ app.put('/image' , (req, res) => {entries.getEntries(req, res, db)})
 app.post('/imageUrl' , (req, res) => {entries.handelApiCall(req, res)})
 
 
-app.listen(3001, ()=>{
-    console.log('app is running on port 3001')
+app.listen(process.env.PORT || 3001, ()=>{
+  console.log(`app is running on port 3001 ${process.env.PORT}`)
 })
